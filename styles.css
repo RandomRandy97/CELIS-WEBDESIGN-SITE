@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+list-style: none;
+text-decoration: none;
+font-family: Roboto, sans-serif;
+
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 10%;
+    background-color: #333;
+    color: #fff;
+   
+}
+.logo img{
+	max-width: 120px;
+	height: auto;
+	
+}
+
+.navmenu{
+	display: flex;
+	
+}
+.navmenu a{
+	color: #E7EEFF;
+	font-size: 16px;
+	text-transform: capitalize;
+	padding: 10px 20px;
+	font-weight: 400;
+	transition: all .50s ease;
+	
+}
+.navmenu a:hover{
+	color: yellow
+}
+.nav-icon{
+	display:block;
+	margin-top: 10px;
+}
+.nav-icon i{
+	margin-right:15px;
+	color: red;
+	font-size: 30px;
+	font-weight: 400;
+	transition: all .50s ease;
+	}
+	.nav-icon i:hover{
+		transform: scale(1:1);
+		color: #80A5FF;
+		}
+		
+		section{
+			padding: 5% 10%;
+			
+		}
+		.main-home{
+			width: 100%;
+			height: 100vh;
+			background-image: url("HERO PAGE PIC.png");
+			background-position: center;
+			background-size: cover;
+			display: grid;
+			grid-template-columns: repeat(1,1fr);
+			align-items: center;
+		}
+	.highlight-text {
+    text-shadow: 0 0 3px #000000;
+		}
+		.main-text h1{
+			color: #FF2724;
+			font-size: 70px;
+			text-transform:capitalize;
+			font-weight: 600;
+			line-height: 1.1;
+			margin: 6px 0px 10px;
+			}
+			.main-text h3{
+			color: #FFFF76;
+			font-size: 40px;
+			text-transform:capitalize;
+			font-weight: 400;
+			}
+			
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.down-arrow{
+	position:absolute;
+	top:90%;
+	right:10%;
+}
+.down i{
+	font-size:35px;
+	color:yellow;
+	border:7px solid #527AFF;
+	border-radius:50px;
+	padding:12px 12px;
+}
+.down i:hover{
+	background-color:red;
+	color:white;
+	transition: all .50s ease;
+}
+header.sticky{
+	background:gray;
+	padding: 20px 10%;
+	box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+.center-text h2{
+	color: black;
+	font-size:30px;
+	text-transform:capitalize;
+	text-align:center;	
+	margin-bottom:35px;
+}
+.center-text span{
+	color:red;
+}
+.products{
+	 display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 2rem;
+}
+.row{
+	position:relative;
+	transition:all .50s;
+	height:200px;
+}
+.row img{
+	width: 50%;
+	height: auto;
+	transition:all .50s;
+}
+.row img:hover{
+	transform:scale(0.9);
+}
+.heart-icon{
+	position:absolute;
+	top:10px;
+	right:10px;
+	font-size:20px;
+}
+.rating{
+	color:orange;
+	font-size:20px;
+}
+.price h4{
+	color:#3F3F3F;
+	font-size:18px;
+	text-transform:capitalize;
+	font-weight:400;
+	}
+.price p{
+	color: #0D0D0D;
+	font-size:16px;
+	font-weight:600;
+	}

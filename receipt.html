@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt - Prolene</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            max-width: 150px;
+        }
+        h1 {
+            color: #333;
+        }
+        .receipt-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        .receipt-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .total {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-weight: bold;
+            border-top: 2px solid #333;
+        }
+        .total span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="PROLENE LOGO NB.png" alt="Prolene Logo" class="logo">
+    </header>
+    <h1>Thank You for Your Purchase</h1>
+    <div class="receipt-container">
+        <div id="receipt-items"></div>
+        <div class="total">
+            <span>Total Amount:</span>
+            <span id="total-amount"></span>
+        </div>
+    </div>
+
+    <script>
+        
+        var urlParams = new URLSearchParams(window.location.search);
+        var totalAmount = urlParams.get('total');
+
+        
+        var purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || [];
+
+       
+        var receiptItemsDiv = document.getElementById('receipt-items');
+        purchasedItems.forEach(item => {
+            var itemDiv = document.createElement('div');
+            itemDiv.classList.add('receipt-item');
+            itemDiv.innerHTML = `<span>${item.title}</span><span>${item.price}</span>`;
+            receiptItemsDiv.appendChild(itemDiv);
+        });
+
+        
+        document.getElementById('total-amount').innerText = totalAmount;
+
+        
+    </script>
+</body>
+</html>
+

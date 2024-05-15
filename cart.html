@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prolene-Shopping Cart</title>
+<link rel="stylesheet" href="styles2.css"> 
+<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+		    <a href="index.html" class="home-button"><i class='bx bxs-home' ></i></a>
+		    <i class='bx bx-shopping-bag' id="cart-icon"></i>
+			
+			<div class="cart">
+			<h2 class="cart-title">Your Cart</h2>
+			<div class="cart-content">
+			<div class="cart-box">
+			
+		</div>
+		</div>
+		<div class="total">
+		<div class="total-title">Total</div>
+		<div class="total-price">₱0</div>
+		</div>
+		<button type="button" class="btn-buy">Buy Now!</button>
+		<i class='bx bx-x' id="close-cart"></i>
+		</div>
+		</div>
+    </header>
+	<button type="button" class="btn-buy" onclick="redirectToReceipt()"></button>
+    <section class="shop container">
+	    <h1 class="section-title">Shop Products</h1>
+	
+	    <div class="shop-content">
+	        
+	           
+	            <div class="product-box">
+	                <img src="WHEY OPTIMUM NUTRITION GOLD STANDARD WHEY 2 LBS DOUBLE RICH CHOCOLATE.png" alt="" class="product-img">
+	                <h2 class="product-title">Optimum Nutrition Gold Standard Whey 2lbs Double Rich Chocolate</h2>
+					<span class="price">₱2,210</span>
+					<i class='bx bx-shopping-bag add-cart'></i>
+	            </div>
+				<div class="product-box">
+	                <img src="WheyProteinAthlene.png" alt="" class="product-img">
+	                <h2 class="product-title">Athlene Active Whey Protein 1 lb 100% Whey Protein Powder</h2>
+					<span class="price">₱1,270</span>
+					<i class='bx bx-shopping-bag add-cart'></i>
+	            </div>
+				<div class="product-box">
+	                <img src="WHEY JUST WHEYL.png" alt="" class="product-img">
+	                <h2 class="product-title">Wheyl Nutrition Just Whey Protein 1 lb Pouch</h2>
+					<span class="price">₱800</span>
+					<i class='bx bx-shopping-bag add-cart'></i>
+	            </div>
+				<div class="product-box">
+	                <img src="WHEY WHEYLABS PRO STANDARD WHEY PROTEIN VANILLA CREAM.png" alt="" class="product-img">
+	                <h2 class="product-title">Wheylabs Pro Standard Whey Protein Vanilla Cream</h2>
+					<span class="price">₱3,200</span>
+					<i class='bx bx-shopping-bag add-cart'></i>
+	            </div>
+	        </div>
+	        <div class="shop-content">
+	           
+	            
+	            <div class="product-box">
+	                <img src="BCAA OPTIMUM NUTRITION.png" alt="" class="product-img">
+	                <h2 class="product-title">Optimum Nutrition BCAA 1000, 1000MG, 200 Capsules(500 mg per capsule)</h2>
+					<span class="price">₱1,500</span>
+					<i class='bx bx-shopping-bag add-cart'></i>
+	            </div>
+				<div class="product-box">
+	                <img src="BCAA NUTRICOST.png" alt="" class="product-img">
+	                <h2 class="product-title">Nutricost Performance, BCAA, 1000mg, 500 Capsules(500 mg per capsule)</h2>
+					<span class="price">₱995</span>
+					<i class='bx bx-shopping-bag add-cart'></i>
+	            </div>
+				<div class="product-box">
+	                <img src="BCAA XTEND TROPIC THUNDER.png" alt="" class="product-img">
+	                <h2 class="product-title">Xtend, The Original 7G BCAA, Tropic Thunder, 2.68 lbs</h2>
+					<span class="price">₱3,955</span>
+					<i class='bx bx-shopping-bag add-cart'></i>
+	            </div>
+				<div class="product-box">
+	                <img src="BCAA XTEND LEMON LIME.png" alt="" class="product-img">
+	                <h2 class="product-title">Xtend, The Original, Lemon-Lime Squeeze, 2.68 lbs</h2>
+					<span class="price">₱3,955</span>
+					<i class='bx bx-shopping-bag add-cart'></i>
+	            </div>
+	        </div>
+	        
+	        <div class="shop-content">
+	            
+	            <div class="product-box">
+	                <img src="CREATINE Athlene 300g 60 Servings.png" alt="" class="product-img">
+	                <h2 class="product-title">Athlene Active CREATINE Monohydrate 300g 60 Servings</h2>
+					<span class="price">₱700</span>
+					<i class='bx bx-shopping-bag add-cart'></i>
+	            </div>
+				<div class="product-box">
+	                <img src="CREATINE Optimum Nutrition Micronized Creatine Powder 600g.png" alt="" class="product-img">
+	                <h2 class="product-title">Optimum Nutrition Micronized Creatine Powder 600g</h2>
+					<span class="price">₱2,300</span>
+					<i class='bx bx-shopping-bag add-cart'></i>
+	            </div>
+				<div class="product-box">
+	                <img src="CREATINE Wheyl Krea 300 g Tub.png" alt="" class="product-img">
+	                <h2 class="product-title">Wheyl Nutrition Krea 300g Tub</h2>
+					<span class="price">₱800</span>
+					<i class='bx bx-shopping-bag add-cart'></i>
+	            </div>
+				<div class="product-box">
+	                <img src="CREATINE ON CAPS.png" alt="" class="product-img">
+	                <h2 class="product-title">Optimum Nutrition 2500 (200 Capsules)</h2>
+					<span class="price">₱2,600</span>
+					<i class='bx bx-shopping-bag add-cart'></i>
+    </div>
+	        </div>
+	    </div>
+	</section>
+    <footer>
+        Prolene. All rights reserved.
+    </footer>
+	
+           
+        </div>
+    </div>
+</div>
+	<script src="script2.js"></script> 
+</body>
+</html>
